@@ -1,0 +1,19 @@
+{
+    "predef": [
+        "define",
+        "require",
+        "it",
+        "describe",
+        "expect",
+        "spyOn",
+        "beforeEach",
+        "afterEach"
+    ],
+
+    "browser"       : true,
+    "devel"         : true,
+    "jquery"        : true,
+    "node"          : true,
+    "nonstandard"   : false,
+    "prototypejs"   : false
+}

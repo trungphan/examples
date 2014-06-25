@@ -1,0 +1,23 @@
+let g:unite_source_file_rec_ignore_pattern = '.*\.pyc\|.*\.pdf\|.*\.svg\|\.git\|watch.pid'
+
+if executable('ag')
+    let g:unite_source_rec_async_command = 'ag -g ""'
+elseif executable('ack')
+	let g:unite_source_rec_async_command = 'ack -f --nofilter --ignore-dir={node_modules,target}'
+else
+    let g:unite_source_file_rec_ignore_pattern = '.*\.pyc\|.*\.pdf\|.*\.svg\|\.git\|watch.pid\|node_modules\|lib\|target'
+    echomsg "silversearcher-ag or ack not found, but recommended for speed."
+endif
+
+let g:jump_pattern = [
+            \ ["/app/js/\\(.*\\)\\.js$", "/test/spec/\\1_spec.js"],
+            \ ["/test/spec/\\(.*\\)_spec\\.js$", "/app/js/\\1.js", "skip"],
+            \ ["/test/spec/\\(.*\\)_spec\\.js$", "/app/js/\\1.js"],
+            \ ["/test/spec/\\(.*\\)\\.js$", "/test/spec/\\1_spec.js"]
+            \ ]
+
+" Aggregate both errors from jslint and jshint
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'active_filetypes': ['js', 'hs'],
+            \ 'passive_filetypes': ['java'] }

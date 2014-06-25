@@ -1,7 +1,10 @@
 This project is an example of setting up projects using jasmine test for angular js
 
 
-STEPS to create:
+
+
+STEPS to start a project from scratch:
+0. mkdir newproj; cd newproj
 1. make sure ./node_modules/.bin in PATH, phantomjs in PATH
 2. create file .bowerrc with { "directory": "app/components" }
 3. npm install grunt grunt-cli grunt-exec grunt-contrib-connect grunt-contrib-watch bower karma karma-cli karma-jasmine@2_0 karma-chrome-launcher --save-dev

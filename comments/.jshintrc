@@ -1,0 +1,20 @@
+{
+    "browser"       : true,     // Web Browser (window, document, etc)
+    "devel"         : true,     // Development/debugging (alert, confirm, etc)
+    "jquery"        : true,    // jQuery
+    "node"          : true,    // Node.js
+    "nonstandard"   : false,    // Widely adopted globals (escape, unescape, etc)
+    "prototypejs"   : false,    // Prototype and Scriptaculous
+
+    // Custom Globals
+    "globals"       : {
+        "it": true,
+        "describe": true,
+        "expect": true,
+        "spyOn": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "require": true,
+        "define": true
+    }
+}
