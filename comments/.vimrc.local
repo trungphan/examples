@@ -3,7 +3,7 @@ let g:unite_source_file_rec_ignore_pattern = '.*\.pyc\|.*\.pdf\|.*\.svg\|\.git\|
 if executable('ag')
     let g:unite_source_rec_async_command = 'ag -g ""'
 elseif executable('ack')
-	let g:unite_source_rec_async_command = 'ack -f --nofilter --ignore-dir={node_modules,target}'
+	let g:unite_source_rec_async_command = 'ack -f --nofilter --ignore-dir={node_modules,target,.idea,components}'
 else
     let g:unite_source_file_rec_ignore_pattern = '.*\.pyc\|.*\.pdf\|.*\.svg\|\.git\|watch.pid\|node_modules\|lib\|target'
     echomsg "silversearcher-ag or ack not found, but recommended for speed."
