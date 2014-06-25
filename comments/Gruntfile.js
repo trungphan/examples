@@ -4,11 +4,15 @@ module.exports = function (grunt) {
     grunt.initConfig({
         connect: {
             test: {
-                port: 8000,
                 middleware: function (connect) {
                     return [
                         mountFolder(connect, 'app')
                     ];
+                },
+                options: {
+                    port: 8000,
+                    hostname: "0.0.0.0",
+                    base: ".." // make inline with Webstorm
                 }
             }
         },
@@ -20,7 +24,7 @@ module.exports = function (grunt) {
 
         exec: {
             jasmine: {
-                command: 'phantomjs test/lib/run-jasmine.js http://localhost:8000/test',
+                command: 'phantomjs test/lib/run-jasmine.js http://127.0.0.1:8000/comments/test',
                 stdout: true
             }
         }

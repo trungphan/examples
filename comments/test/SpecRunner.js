@@ -19,7 +19,7 @@ require(['jquery', 'spec/index'], function ($, index) {
 
     var env = jasmine.getEnv();
 
-    if (navigator.userAgent.indexOf("PhantomJS") > 0) {
+//    if (navigator.userAgent.indexOf("PhantomJS") > 0) {
         var ConsoleReporter = jasmineRequire.ConsoleReporter();
         var consoleReporter = new ConsoleReporter({
             showColors: true,
@@ -30,7 +30,7 @@ require(['jquery', 'spec/index'], function ($, index) {
         });
 
         env.addReporter(consoleReporter);
-    }
+//    }
 
     $(function () {
         require(index.specs, function () {
